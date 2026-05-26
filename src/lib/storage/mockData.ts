@@ -3,414 +3,316 @@ import { Project, TeachingBrief, LearningBlueprint, DocumentPack, QAReport } fro
 
 export const SEED_BRIEF: TeachingBrief = {
   documentType: "bootcamp_module",
-  topic: "Dasar Cybersecurity",
-  audience: "Siswa SMK kelas 11",
-  duration: "2 hari, 4 jam per hari",
+  topic: "Dasar Vibe Coding & Prompt Engineering",
+  audience: "Pemula (Non-Programmer)",
+  duration: "1 hari (6 jam)",
   level: "beginner",
-  finalOutcome: "Poster edukasi anti-phishing",
-  languageStyle: "Bahasa Indonesia, santai, praktis",
-  localContext: ["WhatsApp", "akun game", "email palsu", "marketplace"],
-  constraints: ["Tidak terlalu teknis", "Banyak contoh nyata"]
+  finalOutcome: "Aplikasi Web Sederhana Hasil Kolaborasi AI",
+  languageStyle: "Bahasa Indonesia, modern, inspiratif",
+  localContext: ["Gemini AI", "Cursor/Windsurf", "Hackathon", "Portofolio"],
+  constraints: ["Tanpa perlu instalasi software rumit", "Fokus pada logika bahasa manusia"]
 };
 
 export const SEED_BLUEPRINT: LearningBlueprint = {
-  summary: "Bootcamp 2 hari untuk mengenalkan konsep dasar cybersecurity dan perlindungan diri dari kejahatan siber kepada siswa SMK kelas 11 secara santai, berfokus pada pencegahan phishing dan pembuatan materi kampanye keamanan.",
+  summary: "Bootcamp kilat 1 hari untuk membongkar rahasia 'Vibe Coding'—cara modern membangun perangkat lunak menggunakan instruksi bahasa alami (Prompt) ke agen AI seperti Gemini, tanpa harus menghafal sintaks kode tradisional.",
   learningObjectives: [
-    "Menjelaskan konsep dasar cybersecurity dalam kehidupan sehari-hari.",
-    "Mengidentifikasi contoh phishing pada WhatsApp, email, dan marketplace lokal.",
-    "Menerapkan password hygiene (keamanan kata sandi) pada akun pribadi.",
-    "Menjelaskan manfaat Multi-Factor Authentication (MFA).",
-    "Membuat poster edukasi anti-phishing sebagai hasil karya akhir."
+    "Memahami pergeseran paradigma dari Traditional Coding ke Vibe Coding.",
+    "Menguasai kerangka kerja MEGA (Misi, Eksekusi, Guardrails, Aturan) dalam Prompting.",
+    "Mengidentifikasi dan memitigasi halusinasi AI saat menulis kode.",
+    "Menerapkan siklus iterasi (Prompt-Generate-Test) dalam pembuatan mini web-app."
   ],
   prerequisites: [
-    "Mampu menggunakan smartphone atau laptop dasar.",
-    "Memiliki setidaknya satu akun media sosial atau email pribadi."
+    "Mampu mengoperasikan peramban web dasar.",
+    "Memiliki imajinasi kreatif dan kemauan bereksperimen dengan bahasa."
   ],
   sessionPlan: [
     {
-      sessionTitle: "Hari 1: Fondasi Keamanan Siber & Deteksi Phishing",
-      duration: "4 Jam",
+      sessionTitle: "Sesi 1: Era Baru Vibe Coding & Seni Berkomunikasi dengan AI",
+      duration: "3 Jam",
       objectives: [
-        "Menjelaskan konsep dasar cybersecurity dalam kehidupan sehari-hari.",
-        "Mengidentifikasi contoh phishing pada WhatsApp, email, dan marketplace lokal."
+        "Memahami pergeseran paradigma dari Traditional Coding ke Vibe Coding.",
+        "Menguasai kerangka kerja MEGA (Misi, Eksekusi, Guardrails, Aturan)."
       ],
       activities: [
-        "Sesi Interaktif: Apa itu Cybersecurity dan Mengapa Kita Jadi Target?",
-        "Analisis Studi Kasus: Penipuan kurir paket di WhatsApp dan link palsu hadiah shopee/game gratis.",
-        "Aktivitas Kelompok: Membedakan pesan asli vs pesan palsu (phishing).",
-        "Refleksi & Pengumpulan Draf Checklist Pendeteksi Phishing."
+        "Sesi Interaktif: Apa itu Vibe Coding? Mengapa bahasa Indonesia (dan Inggris) adalah bahasa pemrograman masa depan?",
+        "Analisis Studi Kasus: Prompt buruk vs Prompt berkualitas tinggi.",
+        "Aktivitas Pasangan: Permainan tebak instruksi buta (menggambarkan pentonjolan betapa AI butuh konteks eksplisit)."
       ],
       outputs: [
-        "Lembar draf checklist tanda-tanda phishing buatan kelompok."
+        "Koleksi draf prompt awal (System Prompt) buatan siswa."
       ]
     },
     {
-      sessionTitle: "Hari 2: Password Hygiene, MFA, & Kampanye Anti-Phishing",
-      duration: "4 Jam",
+      sessionTitle: "Sesi 2: Praktik Eksekusi & Iterasi Aplikasi Web",
+      duration: "3 Jam",
       objectives: [
-        "Menerapkan password hygiene (keamanan kata sandi) pada akun pribadi.",
-        "Menjelaskan manfaat Multi-Factor Authentication (MFA).",
-        "Membuat poster edukasi anti-phishing sebagai hasil karya akhir."
+        "Mengidentifikasi dan memitigasi halusinasi AI saat menulis kode.",
+        "Menerapkan siklus iterasi dalam pembuatan mini web-app."
       ],
       activities: [
-        "Simulasi & Demo: Cara hacker menebak password menggunakan taktik brute-force sederhana.",
-        "Hands-on: Membuat password yang kuat menggunakan frasa unik dan mengaktifkan MFA di akun masing-masing.",
-        "Workshop Kreatif: Merancang dan membuat poster kampanye anti-phishing di Canva atau kertas gambar.",
-        "Showcase & Penilaian: Presentasi poster kelompok dan kuis akhir program."
+        "Demonstrasi Live: Mengubah Prompt menjadi UI Kalkulator atau To-Do List dengan Gemini.",
+        "Praktik Mandiri: Siswa mulai 'Vibe Coding' aplikasi impian mereka di lingkungan sandbox (codepen/replit).",
+        "Refleksi: Memperbaiki error (debugging) bukan dengan kode, melainkan dengan memperbaiki kalimat Prompt.",
+        "Showcase: Pameran hasil mini web-app dan saling mencoba."
       ],
       outputs: [
-        "Poster kampanye edukasi anti-phishing siap pakai dan dipublikasikan."
+        "Mini web-app fungsional (HTML/CSS/JS) murni hasil Vibe Coding."
       ]
     }
   ],
   assessmentPlan: [
-    "Kuis pilihan ganda berisi 5 soal evaluasi pemahaman teori di akhir Hari ke-2.",
-    "Rubrik penilaian poster kelompok untuk mengukur kejelasan pesan, aspek visual, dan relevansi konteks lokal."
+    "Kuis konseptual 5 soal tentang struktur Prompt dan siklus Vibe Coding.",
+    "Penilaian kualitatif pada produk akhir aplikasi (berfungsi, minim error, dan UI menarik)."
   ],
   finalProject: {
-    title: "Poster Kampanye Edukasi Anti-Phishing",
-    description: "Peserta secara berkelompok membuat poster edukatif 1 halaman yang mudah dipahami oleh orang awam (seperti orang tua atau adik kelas) tentang bahaya phishing dan cara menghindarinya.",
+    title: "Mini Web-App Pilihan Bebas",
+    description: "Peserta mem-Vibe Code sebuah aplikasi satu halaman (Single Page App) yang bisa berupa kalkulator BMI, To-Do List, atau Pembangkit Kutipan Acak, murni dengan menginstruksikan AI.",
     deliverables: [
-      "File ekspor poster digital (PNG/PDF) atau foto poster fisik buatan tangan."
+      "Tautan proyek berjalan (Live Link) dan dokumen sejarah Prompt (Prompt Log)."
     ],
     criteria: [
-      "Kejelasan pesan utama (mudah dipahami orang awam)",
-      "Penggunaan contoh lokal (WhatsApp, marketplace, game)",
-      "Visual yang menarik dan rapi",
-      "Adanya seruan aksi/ajakan bertindak (Call to Action)"
+      "Fungsionalitas fitur (Berjalan tanpa error teknis)",
+      "Kualitas struktur Prompt (Mengandung Role, Konteks, dan Constraint)",
+      "Estetika UI/UX (Diinstruksikan dengan baik ke AI)",
+      "Resiliensi (Kemampuan siswa menavigasi halusinasi AI)"
     ]
   }
 };
 
 export const SEED_DOCUMENT_PACK: DocumentPack = {
-  studentModule: `# Modul Peserta: Dasar Keamanan Siber & Deteksi Phishing
+  studentModule: `# Modul Peserta: Menjadi Maestro Vibe Coding 🚀
 
-Selamat datang di Modul **Dasar Keamanan Siber**! Modul ini dirancang khusus untuk membantumu mengenali bahaya digital yang mengintai di kehidupan sehari-hari, serta melatih langkah-langkah praktis untuk melindungi akun pribadimu.
+Selamat datang di era baru pengembangan perangkat lunak! Hari ini, kamu tidak akan dituntut untuk menghafal titik-koma (\`;\`) atau sintaks bahasa pemrograman yang rumit. 
 
----
-
-## 1. Apa Itu Keamanan Siber (Cybersecurity) di Keseharian Kita?
-
-Bayangkan akun WhatsApp, Instagram, TikTok, atau akun game kesayanganmu seperti kamar kos pribadi. Jika pintu kamar tidak pernah dikunci, atau kamu meninggalkan kuncinya di meja kantin sekolah, siapapun bisa masuk dan mencuri barang-barang berharga di dalamnya.
-
-Di dunia digital, **Keamanan Siber (Cybersecurity)** adalah segala upaya kita untuk memasang gembok pada pintu kamar tersebut. Ini adalah pertahanan agar data pribadi (foto, chat, dokumen), uang digital (e-wallet seperti GoPay, ShopeePay), dan identitas online milik kita aman dari pencurian dan penyalahgunaan.
+Hari ini, **bahasa manusiapun adalah bahasa pemrograman**.
 
 ---
 
-## 2. Mengenal Phishing: Jeratan Umpan Digital
+## 1. Apa Itu Vibe Coding?
 
-Salah satu serangan siber yang paling sering memakan korban di Indonesia adalah **Phishing**. 
+**Vibe Coding** adalah istilah revolusioner di mana kita membangun perangkat lunak tidak dengan mengetik baris kode secara manual, melainkan dengan bertindak sebagai **"Sutradara/Manajer"** yang memberikan instruksi (*prompt*) kepada agen AI (seperti Gemini). AI yang akan bertindak sebagai koder senior yang mengeksekusi visimu.
 
-> **Definisi Phishing:**
-> Istilah ini berasal dari kata *fishing* (memancing). Phishing adalah upaya penipuan di mana pelaku berpura-pura menjadi institusi resmi atau orang terdekat untuk mengelabui korban agar memberikan informasi rahasia secara sukarela, seperti kata sandi, PIN, nomor kartu ATM, atau kode OTP (One-Time Password).
+> 💡 **Kunci Sukses:**
+> Dalam Vibe Coding, keterbatasan utamamu bukanlah seberapa pintar kamu dalam matematika atau ilmu komputer, melainkan seberapa presisi, logis, dan kaya imajinasimu saat menyusun kalimat bahasa alami.
 
-### Jenis & Contoh Phishing Populer di Indonesia:
+---
 
-| Vektor / Media | Deskripsi Taktik Penipuan | Indikator Bahaya (Red Flags) |
+## 2. Kerangka Kerja Prompt: MEGA (Misi, Eksekusi, Guardrails, Aturan)
+
+Agar AI tidak berhalusinasi atau memberikan hasil yang melenceng, instruksi kita harus terstruktur. Gunakan format **MEGA**:
+
+| Komponen | Deskripsi | Contoh |
 | :--- | :--- | :--- |
-| **WhatsApp Kurir APK** | Pelaku mengirim file dengan nama \`.APK\` berkedok "Foto Paket" atau "Resi J&T". | Ekstensi file adalah \`.apk\` (bukan \`.jpg\` atau \`.pdf\`), ukuran file beberapa MB. |
-| **Undangan Nikah APK** | Mengirim undangan pernikahan palsu berformat APK untuk memicu penasaran korban. | Meminta instalasi manual di luar Google Play Store. |
-| **Link Hadiah Shopee** | Tautan undian berhadiah palsu yang mengarah ke form login tiruan. | URL menggunakan domain gratisan atau aneh (contoh: \`.blogspot.com\`, \`.xyz\`, \`.gift\`). |
-| **Phishing Diamond Game** | Halaman web palsu yang menjanjikan Diamond Mobile Legends gratis. | Meminta memasukkan email, password akun game, dan kode OTP verifikasi. |
+| **M**isi (Peran & Tujuan) | Tentukan siapa AI dan apa tujuan akhirnya. | *"Kamu adalah Web Developer Ahli. Buatkan saya aplikasi Kalkulator."* |
+| **E**ksekusi (Langkah Detail) | Jelaskan fitur apa saja yang ada. | *"Kalkulator harus punya tombol tambah, kurang, kali, bagi, dan tombol clear merah."* |
+| **G**uardrails (Batasan) | Beri tahu AI apa yang TIDAK BOLEH dilakukan. | *"Jangan gunakan library eksternal seperti React. Gunakan Vanilla JS saja."* |
+| **A**turan Format (Output) | Tentukan bagaimana kode harus disajikan. | *"Berikan kode dalam satu blok file index.html yang sudah mencakup tag <style> dan <script>."* |
 
 ---
 
-## 3. Cara Kerja APK Phishing (Pencurian OTP SMS)
+## 3. Siklus Iterasi Vibe Coding (Debugging Tanpa Kode)
 
-Bagaimana chat kurir palsu di WhatsApp bisa menguras habis rekening bank atau saldo e-wallet korban? Mari kita lihat visualisasi berikut:
+Terkadang, hasil dari AI tidak 100% sempurna di percobaan pertama. Itulah mengapa kita menggunakan Siklus Iterasi.
 
 \`\`\`mermaid
 graph TD
-    A["1. Pelaku mengirim chat + file APK palsu"] --> B["2. Korban terpancing menginstal file APK"]
-    B --> C["3. Aplikasi meminta izin membaca SMS (READ_SMS)"]
-    C --> D["4. Korban memberikan izin akses tanpa curiga"]
-    D --> E["5. Pelaku login ke mobile banking/e-wallet korban"]
-    E --> F["6. SMS OTP masuk ke HP korban, dibaca otomatis oleh malware"]
-    F --> G["7. Malware mengirim OTP ke server pelaku"]
-    G --> H["8. Pelaku menguras saldo e-wallet korban"]
+    A["1. Berikan Prompt (MEGA)"] --> B["2. AI Membuat Kode"]
+    B --> C{"3. Apakah Ada Error / Bug?"}
+    C -- "Ya, tombol tidak jalan" --> D["4. Jangan sentuh kode! Beri AI 'Error Message' atau jelaskan bug-nya"]
+    D --> B
+    C -- "Tidak, sempurna!" --> E["5. Tambah Fitur Baru / Perbagus UI"]
+    E --> A
 \`\`\`
 
-Ketika kamu memberikan izin **"Baca SMS"** (*READ_SMS*) pada aplikasi palsu tersebut, kamu secara tidak langsung memberikan kunci brankasmu ke peretas. Setiap kali ada kode OTP perbankan masuk via SMS, malware akan langsung meneruskannya ke peretas secara otomatis.
-
----
-
-## 4. Langkah Praktis Melindungi Akun Pribadi
-
-### A. Terapkan Password Hygiene (Keamanan Kata Sandi)
-1. **Jangan gunakan tanggal lahir atau nama:** Password seperti \`budi2007\` sangat mudah ditebak peretas dalam waktu kurang dari 1 detik.
-2. **Gunakan metode Passphrase:** Kombinasikan 3-4 kata acak yang mudah kamu ingat tetapi sulit ditebak sistem. 
-   - *Contoh Kuat:* \`MakanSateKambingDiSolo@2026!\`
-3. **Satu Akun, Satu Password:** Jangan samakan password Instagram dengan password email utama atau akun sekolahmu. Jika satu akun bocor, akun lainnya tetap aman.
-
-### B. Aktifkan Multi-Factor Authentication (MFA)
-MFA adalah keamanan berlapis. Selain password (sesuatu yang kamu tahu), kamu membutuhkan kunci verifikasi tambahan (sesuatu yang kamu miliki).
-- **Verifikasi Dua Langkah WhatsApp:** Buka **Setelan > Akun > Verifikasi Dua Langkah**. Buat PIN 6 digit yang wajib dimasukkan secara berkala. Ini mencegah pembajakan nomor meskipun OTP SMS-mu dicuri.
+**Ingat:** Saat menghadapi *error*, jangan panik. *Copy* pesan *error* tersebut, dan berikan kembali ke Gemini dengan pesan: *"Saya mendapat error ini, tolong perbaiki logikanya."*
 
 ---
 
 ## Lembar Refleksi Mandiri:
-- [ ] Apakah saya sudah mengaktifkan Verifikasi Dua Langkah di WhatsApp?
-- [ ] Apakah password e-mail utama saya berbeda dengan password akun media sosial?
-- [ ] Apakah saya langsung menghapus file berakhiran \`.apk\` yang dikirim via chat?
-- [ ] Apakah saya terbiasa memeriksa ulang nama domain situs sebelum mengetikkan password?
+- [ ] Apakah *prompt* awal saya sudah mengandung Misi dan Batasan yang jelas?
+- [ ] Ketika hasil AI salah, apakah saya menyerah atau saya mencoba memberikan instruksi yang lebih detail?
+- [ ] Apakah saya sudah mencoba meminta AI untuk menambahkan CSS *Glassmorphism* untuk mempercantik UI aplikasi saya?
 
-*Keamanan digital dimulai dari dirimu sendiri! Waspada sebelum klik.*
+*Selamat bereksperimen, Vibe Coder!*
 `,
-  facilitatorGuide: `# Panduan Fasilitator: Rencana Pelaksanaan Pelatihan Keamanan Siber
+  facilitatorGuide: `# Panduan Fasilitator: Bootcamp Vibe Coding
 
-Panduan ini disusun untuk membantu guru atau fasilitator menyelenggarakan workshop interaktif Keamanan Siber bagi siswa SMK kelas 11 secara menarik dan praktis.
+Panduan ini disusun untuk memandu jalannya kelas pengenalan Vibe Coding. Fokus utamanya adalah membuang ketakutan siswa terhadap *coding* tradisional.
 
 ---
 
 ## 📑 Ringkasan Kegiatan
-- **Durasi Total:** 2 Hari (4 Jam/Hari, total 8 Jam)
-- **Metode:** Ceramah interaktif, bedah kasus nyata, kerja kelompok, dan workshop pembuatan poster kampanye di Canva.
-- **Kunci Keberhasilan:** Gunakan analogi sehari-hari dan hindari istilah teknis jaringan komputer yang rumit di awal sesi.
-
----
-
-## 🛠️ Persiapan & Alat Bantu
-1. **Bahan Studi Kasus:** Screenshot chat WhatsApp kurir APK palsu, undangan pernikahan palsu, dan website phishing game online.
-2. **Alat Pendukung:** Proyektor, laptop per kelompok, kertas karton besar (jika Canva tidak tersedia), spidol warna, dan stiker.
-3. **Instalasi:** Pastikan koneksi internet lancar agar siswa dapat mengakses Canva untuk merancang poster.
+- **Durasi:** 1 Hari (6 Jam)
+- **Metode:** Simulasi prompt, bedah kasus "halusinasi AI", dan perancangan *Live App*.
+- **Kunci Keberhasilan:** Fasilitator harus sering menunjukkan momen *Trial & Error*. Tunjukkan bahwa bahkan prompt dari pakar terkadang butuh 2-3 kali revisi. Vibe coding adalah tentang dialog dengan AI.
 
 ---
 
 ## 📅 Rencana Pembelajaran Detail
 
-### HARI 1: Mengenal Serangan Rekayasa Sosial & Phishing (4 Jam)
+### Sesi 1: Era Baru Vibe Coding (3 Jam)
+- **Aktivitas Pembuka:** Tunjukkan sebuah aplikasi web kalkulator BMI sederhana. Tanyakan ke siswa, *"Berapa lama waktu yang dibutuhkan untuk membuat ini dari nol bagi pemula?"*. Lalu demokan pembuatan aplikasi tersebut secara *live* menggunakan Gemini dalam waktu kurang dari 3 menit.
+- **Aktivitas Pasangan (Tebak Buta):** Minta Siswa A menutup mata (berperan sebagai AI) dan Siswa B (berperan sebagai *Prompter*) harus menginstruksikan Siswa A menggambar rumah di kertas. Jika instruksi Siswa B tidak spesifik (misal tidak bilang "beri atap segitiga"), Siswa A menggambar kotak saja. Ini mendemonstrasikan bahwa AI butuh konteks eksplisit.
 
-#### Sesi 1: Pembuka & Analogi Kehidupan Nyata (60 Menit)
-- **Aktivitas:** 
-  1. Mulai dengan pertanyaan pemantik: *"Siapa di sini yang akun game-nya pernah di-hack?"* atau *"Apakah orang tua kalian pernah mendapat SMS undian palsu?"*
-  2. Jelaskan konsep keamanan siber dengan analogi **"Kunci Kamar Kos"**.
-- **Pedagogi:** Hubungkan pentingnya keamanan siber langsung dengan risiko kehilangan uang digital dan akun pribadi mereka sendiri agar siswa termotivasi mendengarkan.
-
-#### Sesi 2: Bedah Kasus Phishing & Simulasi APK (90 Menit)
-- **Aktivitas:**
-  1. Bagikan LKPD (Lembar Kerja) berisi gambar chat kurir palsu.
-  2. Minta perwakilan kelompok mempresentasikan di depan kelas: *Bagaimana cara membedakan file dokumen asli dengan file instalasi APK palsu?*
-  3. Jelaskan alur penipuan OTP dengan diagram alur di papan tulis.
-- **Tips Fasilitasi:** Ingatkan siswa secara tegas bahwa **instansi resmi seperti Bank atau Kurir Ekspedition tidak akan pernah mengirimkan file berakhiran .APK via WhatsApp.**
-
-#### Sesi 3: Diskusi Kelompok & Rancangan Aturan Emas (90 Menit)
-- **Aktivitas:** Setiap kelompok menyusun "3 Aturan Emas Deteksi Dini Phishing". Hasil tulisan ditempel di dinding kelas untuk dibaca kelompok lain (metode *Gallery Walk*).
-
----
-
-### HARI 2: Keamanan Sandi, MFA, & Pembuatan Poster Kampanye (4 Jam)
-
-#### Sesi 1: Praktik Membuat Sandi Kuat & MFA (90 Menit)
-- **Aktivitas:** 
-  1. Demo interaktif: Tulis password \`rahasia123\` di web pengecek kekuatan sandi untuk menunjukkan betapa cepatnya ia diretas.
-  2. Bimbing seluruh siswa mempraktikkan metode **Passphrase** dan langsung mengaktifkan verifikasi 2 langkah di WhatsApp mereka masing-masing saat itu juga.
-
-#### Sesi 2: Workshop Kreatif Pembuatan Poster Kampanye (120 Menit)
-- **Aktivitas:** Siswa merancang poster kampanye anti-phishing di Canva. Tema poster harus ditargetkan untuk kelompok rentan (seperti orang tua atau adik kelas).
-- **Kriteria Poster:** Harus memuat contoh kasus lokal (misal: WhatsApp kurir), tips pencegahan, dan seruan aksi yang jelas (Call to Action).
-
-#### Sesi 3: Showcase & Kuis Penutup (30 Menit)
-- **Aktivitas:** Presentasi kilat poster (2 menit per kelompok), dilanjutkan dengan pengisian kuis objektif sebanyak 5 soal.
+### Sesi 2: Praktik Eksekusi (3 Jam)
+- **Praktik Mandiri:** Siswa masuk ke platform seperti CodePen. Mereka mulai mem-*prompt* Gemini untuk membuat aplikasi pilihan mereka (misal: Aplikasi Pencatat Hutang, atau Pembangkit Kutipan Acak).
+- **Pendampingan:** Fasilitator berkeliling. Jika ada siswa yang mengalami error (aplikasinya tidak jalan), larang mereka mengedit kodenya secara manual. Ajari mereka cara meng-*copy* kendalanya dan memintakan solusinya kembali ke AI.
+- **Showcase:** 30 menit terakhir, minta setiap siswa mempresentasikan karyanya.
 `,
-  worksheet: `# Lembar Kerja Peserta Didik (LKPD): Detektif Keamanan Siber
+  worksheet: `# Lembar Kerja (LKPD): Merancang Prompt Masterpiece
 
-**Nama Anggota Kelompok:**
-1. \`________________________\`
-2. \`________________________\`
-3. \`________________________\`
+**Nama Siswa:** \`________________________\`
 
 ---
 
-## 🔍 Aktivitas 1: Menganalisis Pesan WhatsApp Mencurigakan
+## 🔍 Aktivitas 1: Membedah Prompt yang Buruk vs Baik
 
-Perhatikan baik-baik dua tangkapan layar (screenshot) teks chat di bawah ini, lalu diskusikan dalam kelompokmu untuk mengidentifikasi kejanggalannya.
+**Skenario:** Kamu ingin AI membuatkan halaman web portofolio pribadi.
 
-### 🛑 KASUS A: Pesan dari Kurir Paket
-> *"Selamat siang Kak, saya kurir Shopee Express. Paket dengan nomor resi SPX99321 sudah sampai di area Anda, tetapi alamat rumah tidak lengkap. Tolong cek foto paket di bawah ini untuk memastikan apakah benar ini milik Kakak, lalu instal aplikasinya ya untuk update alamat. Terima kasih."*
-> 
-> **📎 Lampiran File: Foto_Paket_Spx.apk (Ukuran: 5.2 MB)**
+### Prompt A (Buruk):
+> *"Buatkan saya website portofolio yang keren, ada fotonya, ada bagian tentang saya, dan bisa dihubungi."*
 
-### 🛑 KASUS B: Tautan Hadiah Undian
-> *"INFO RESMI BANK MANDIRI: Selamat! Rekening Anda terpilih mendapatkan subsidi tunai Rp2.500.000 dalam rangka HUT Bank Mandiri ke-27. Silakan lakukan klaim data penerima bantuan melalui portal resmi berikut: www.bankmandiri-subsidi-promo.my.id/login"*
+### Prompt B (Baik - Format MEGA):
+> *"Sebagai Web Designer Senior, buatkan saya kode website Single Page Portfolio untuk seorang desainer grafis. (Misi)
+> Website harus memiliki 3 bagian: Header dengan efek parallax, Bagian 'Tentang Saya' dengan foto profil bundar, dan Formulir Kontak di bawah. (Eksekusi)
+> Jangan gunakan framework eksternal seperti Bootstrap, cukup gunakan TailwindCSS via CDN. (Guardrails)
+> Berikan hasil dalam satu blok file HTML yang lengkap. (Aturan Output)"*
 
 ---
 
-## 📝 Lembar Jawaban Diskusi:
+## 📝 Lembar Latihan:
 
-1. **Analisis Kasus A (Kurir Paket):**
-   - Apakah pesan ini aman dibuka? (Ya / Tidak): \`______________\`
-   - Tuliskan 2 kejanggalan utama pada lampiran file di atas!
-     1. Kejanggalan 1: \`__________________________________________________\`
-     2. Kejanggalan 2: \`__________________________________________________\`
+1. **Analisis:** Mengapa Prompt A kemungkinan besar akan menghasilkan desain yang berantakan atau tidak sesuai ekspektasi?
+   *Jawaban:* \`_____________________________________________________________________\`
 
-2. **Analisis Kasus B (Tautan Bank):**
-   - Mengapa alamat website tersebut dinilai sangat mencurigakan dan bukan website resmi Bank Mandiri? Jelaskan analisis kelompokmu pada bagian nama domain!
-     - *Analisis:* \`________________________________________________________________________________________\`
+2. **Giliranmu:** Ubah prompt buruk di bawah ini menjadi Prompt berkualitas dengan kerangka **MEGA**!
+   *Prompt Buruk:* *"Bikin aplikasi to-do list dong yang bisa dicentang kalau udah selesai."*
+   
+   **Prompt MEGA buatanmu:**
+   - **Misi:** \`__________________________________________________________________\`
+   - **Eksekusi:** \`_______________________________________________________________\`
+   - **Guardrails:** \`_____________________________________________________________\`
+   - **Aturan Output:** \`__________________________________________________________\`
 
-3. **Aturan Emas Kelompok (Golden Rules):**
-   Susunlah 3 aturan wajib kelompokmu sebelum membuka tautan atau file dari nomor asing di WhatsApp!
-   - *Aturan 1:* \`__________________________________________________\`
-   - *Aturan 2:* \`__________________________________________________\`
-   - *Aturan 3:* \`__________________________________________________\`
+3. **Praktik Langsung:** Ketikkan prompt buatanmu di atas ke Google Gemini atau AI asisten pilihanmu. Salin kodenya ke *CodePen*, lalu tuliskan 1 hal yang langsung berhasil dan 1 hal yang perlu kamu revisi di prompt keduamu!
+   - *Berhasil:* \`_______________________________________________________________\`
+   - *Perlu Revisi:* \`____________________________________________________________\`
 `,
   quiz: [
     {
-      question: "Apakah yang dimaksud dengan phishing dalam konteks cybersecurity?",
+      question: "Apa yang menjadi kemampuan utama yang dibutuhkan seseorang untuk mahir dalam Vibe Coding?",
       type: "multiple_choice",
       options: [
-        "Metode merusak hardware komputer menggunakan virus",
-        "Upaya penipuan memancing korban untuk memberikan data sensitif (password/OTP) dengan berpura-pura menjadi lembaga resmi",
-        "Tindakan mengamankan database dari serangan luar menggunakan enkripsi",
-        "Mengirim email secara massal untuk tujuan iklan promosi produk baru"
+        "Menghafal ratusan algoritma dan struktur data",
+        "Mengetik dengan kecepatan 120 kata per menit",
+        "Kemampuan menyusun logika bahasa alami dan konteks yang presisi ke dalam Prompt",
+        "Menguasai bahasa pemrograman Assembly dan C++"
       ],
-      answer: "Upaya penipuan memancing korban untuk memberikan data sensitif (password/OTP) dengan berpura-pura menjadi lembaga resmi",
-      explanation: "Phishing berasal dari analogi 'memancing' korban. Tujuannya adalah mengelabui korban agar menyerahkan kunci keamanan (seperti password, pin, OTP) secara sukarela.",
+      answer: "Kemampuan menyusun logika bahasa alami dan konteks yang presisi ke dalam Prompt",
+      explanation: "Vibe coding menggeser beban penulisan sintaks ke AI, sehingga yang terpenting adalah kemampuan manusia berkomunikasi dan merancang logika secara jelas (Prompting).",
       difficulty: "basic"
     },
     {
-      question: "Jika kamu menerima file dengan ekstensi '.apk' dari kurir di WhatsApp padahal kamu tidak memesan apa-apa, tindakan terbaik adalah...",
+      question: "Dalam kerangka kerja MEGA, bagian manakah yang berfungsi untuk mencegah AI berhalusinasi atau menggunakan alat yang tidak kita inginkan?",
       type: "multiple_choice",
       options: [
-        "Langsung menginstal file tersebut karena penasaran isi paketnya",
-        "Meneruskan (forward) pesan tersebut ke teman sekelas untuk bertanya",
-        "Mengabaikan atau menghapus pesan tersebut serta memblokir nomor pengirimnya",
-        "Mengganti ekstensi file menjadi .pdf agar aman dibuka"
+        "Misi (Mission)",
+        "Eksekusi (Execution)",
+        "Guardrails (Batasan/Pagar)",
+        "Aturan (Rules)"
       ],
-      answer: "Mengabaikan atau menghapus pesan tersebut serta memblokir nomor pengirimnya",
-      explanation: "File .apk di WhatsApp dari nomor tak dikenal sering kali merupakan malware pencuri data OTP SMS. Jangan pernah menginstalnya.",
-      difficulty: "standard"
-    },
-    {
-      question: "Manakah di bawah ini contoh pembuatan kata sandi (password) yang memenuhi asas password hygiene yang baik?",
-      type: "multiple_choice",
-      options: [
-        "Admin123 (Mudah diingat)",
-        "Budi21Mei2010 (Memakai nama dan tanggal lahir lengkap)",
-        "MakanBaksoPedasSekali@2026 (Kombinasi kalimat panjang, simbol, angka, dan unik)",
-        "12345678 (Standar keamanan internasional)"
-      ],
-      answer: "MakanBaksoPedasSekali@2026 (Kombinasi kalimat panjang, simbol, angka, dan unik)",
-      explanation: "Password yang baik sebaiknya berbentuk frasa (passphrase) yang panjang, mengandung karakter unik/angka/simbol, serta tidak terikat data pribadi.",
+      answer: "Guardrails (Batasan/Pagar)",
+      explanation: "Guardrails atau batasan memberikan 'pagar' pada AI, misalnya instruksi 'Jangan gunakan React' atau 'Hanya gunakan warna monokrom'.",
       difficulty: "basic"
     },
     {
-      question: "Apa fungsi utama dari mengaktifkan Multi-Factor Authentication (MFA) di akun WhatsApp atau Instagram?",
+      question: "Jika kode yang di-generate oleh AI ternyata menghasilkan error di browser, apa tindakan Vibe Coder sejati?",
       type: "multiple_choice",
       options: [
-        "Mempercepat waktu loading aplikasi saat digunakan di tempat sepi",
-        "Menghemat penggunaan kuota internet data seluler saat mengunggah foto",
-        "Menambahkan lapisan keamanan kedua sehingga akun tetap aman meskipun password utama bocor",
-        "Mencegah iklan masuk ke dalam kolom obrolan obrolan pribadi kita"
+        "Menyerah dan menganggap AI-nya rusak",
+        "Meng-copy pesan error di browser dan memberikannya kembali ke AI untuk diperbaiki secara kolaboratif",
+        "Mencari programmer profesional untuk membenarkan kode HTML-nya secara manual",
+        "Mencoba mencari error titik koma secara manual selama berjam-jam"
       ],
-      answer: "Menambahkan lapisan keamanan kedua sehingga akun tetap aman meskipun password utama bocor",
-      explanation: "Dengan MFA, login baru membutuhkan verifikasi lapis kedua (kode OTP/Authenticator), sehingga peretas yang memegang password Anda tetap tidak bisa masuk.",
+      answer: "Meng-copy pesan error di browser dan memberikannya kembali ke AI untuk diperbaiki secara kolaboratif",
+      explanation: "Iterasi adalah inti dari Vibe Coding. AI adalah partner; berikan ia feedback (error log) agar ia bisa memperbaiki kesalahannya sendiri.",
       difficulty: "standard"
     },
     {
-      question: "Sebuah link undian berhadiah bertuliskan 'www.bank-lokal-undian-indonesia.blogspot.com'. Mengapa tautan ini dikategorikan mencurigakan?",
+      question: "Manakah pernyataan di bawah ini yang paling menggambarkan filosofi Vibe Coding?",
       type: "multiple_choice",
       options: [
-        "Karena tidak memiliki ikon gambar bank",
-        "Karena menggunakan domain blog gratisan (blogspot.com) untuk mengatasnamakan bank resmi",
-        "Karena tidak diawali dengan huruf kapital",
-        "Karena link tersebut terlalu pendek untuk dibaca"
+        "Manusia menulis kode, mesin mengkompilasinya.",
+        "Manusia adalah Manajer/Sutradara yang merumuskan masalah, AI adalah Staf Eksekutor yang menulis sintaks.",
+        "AI akan menggantikan manusia secara total sehingga kita tidak perlu memikirkan logika aplikasi.",
+        "Coding hanya bisa dilakukan oleh lulusan Teknik Informatika."
       ],
-      answer: "Karena menggunakan domain blog gratisan (blogspot.com) untuk mengatasnamakan bank resmi",
-      explanation: "Institusi resmi (khususnya bank) selalu menggunakan domain khusus berbayar yang resmi (seperti .co.id atau .com perusahaan), bukan domain gratisan.",
+      answer: "Manusia adalah Manajer/Sutradara yang merumuskan masalah, AI adalah Staf Eksekutor yang menulis sintaks.",
+      explanation: "Dalam paradigma baru ini, peran manusia naik tingkat ke ranah konseptual, sementara AI menangani eksekusi klerikal pengetikan kode.",
       difficulty: "standard"
     }
   ],
   rubric: [
     {
-      criterion: "Kejelasan Informasi & Pesan",
-      excellent: "Informasi cara mendeteksi dan mencegah phishing sangat jelas, logis, mudah dimengerti orang awam, dan tidak bertele-tele.",
-      good: "Informasi cukup lengkap, namun terdapat 1-2 bagian teori yang masih membingungkan bagi orang awam.",
-      needsImprovement: "Informasi tidak lengkap, membingungkan, atau ada teori yang salah dalam mendeteksi ancaman.",
+      criterion: "Kualitas & Struktur Prompt",
+      excellent: "Prompt awal menggunakan kerangka yang sangat jelas (Peran, Konteks, Constraint) dan menghasilkan kode akurat pada percobaan pertama.",
+      good: "Prompt cukup jelas, namun AI memerlukan beberapa revisi berulang karena kurangnya konteks detail.",
+      needsImprovement: "Prompt terlalu pendek (seperti 'buatkan aplikasi X') sehingga AI kesulitan menangkap visi.",
       weight: 40
     },
     {
-      criterion: "Relevansi Konteks Lokal",
-      excellent: "Menggunakan contoh phishing yang sangat kontekstual dengan kehidupan siswa (misal: kurir paket WhatsApp, diamond game, Shopee).",
-      good: "Menggunakan contoh penipuan umum, namun kurang dekat dengan keseharian target siswa SMK.",
-      needsImprovement: "Tidak menyertakan contoh lokal sama sekali, contoh bersifat sangat teoretis luar negeri.",
-      weight: 30
+      criterion: "Fungsionalitas Mini Web-App",
+      excellent: "Aplikasi berjalan mulus 100%, tombol interaktif berfungsi, dan bebas dari error (bug) fungsional.",
+      good: "Aplikasi berjalan baik secara umum, namun ada 1-2 fitur kecil (misal warna tombol berubah) yang *glitch*.",
+      needsImprovement: "Aplikasi sama sekali tidak berjalan di browser (layar kosong) karena error fatal yang tidak di-debug.",
+      weight: 40
     },
     {
-      criterion: "Visual & Call to Action (CTA)",
-      excellent: "Tata letak poster sangat rapi, kombinasi warna serasi, tulisan terbaca jelas, dan ada seruan aksi preventif yang persuasif.",
-      good: "Visual cukup menarik, tetapi ukuran tulisan kurang proporsional atau kalimat ajakan kurang membekas.",
-      needsImprovement: "Poster berantakan, tulisan sulit dibaca, dan tidak ada kalimat ajakan bertindak (CTA).",
-      weight: 30
+      criterion: "Estetika (UI) Hasil Vibe Coding",
+      excellent: "Tampilan modern, rapi, responsif, dan mencerminkan instruksi desain yang diberikan ke AI secara brilian.",
+      good: "Tampilan standar (cukup layak) namun belum terlihat polesan estetika yang mendalam.",
+      needsImprovement: "Tampilan berantakan, elemen bertumpuk dan tidak nyaman dilihat.",
+      weight: 20
     }
   ]
 };
 
-export const SEED_MOCK_BASIC_MODULE = `# Modul Peserta (Versi Sederhana): Dasar Cybersecurity
-
-Modul ini dibuat khusus untuk mempermudah kamu memahami keamanan internet dengan menggunakan bahasa yang simpel dan banyak contoh perumpamaan sederhana.
+export const SEED_MOCK_BASIC_MODULE = `# Modul Peserta (Versi Pemula): Panduan Cepat Vibe Coding
 
 ---
 
-## 1. Analogi Kunci Kamar
-Bayangkan akun internet kamu seperti kamar kos pribadi kamu. Jika pintu kamarmu tidak dikunci, atau kamu meninggalkan kuncinya di meja kantin, tentu pencuri bisa masuk dan mengambil barang berhargamu, bukan?
-Di internet, **keamanan siber (cybersecurity)** adalah cara kita belajar memasang gembok pintu kamar kita sendiri agar foto, data pribadi, dan akun kita tidak dicuri.
+## Mengapa Vibe Coding?
+Dulu, membuat program itu seperti merangkai mesin jam secara manual. Sekarang, dengan AI, membuat program itu seperti memesan makanan di restoran: kamu hanya perlu menjelaskan dengan sangat detail pesananmu ke "Koki" (AI).
 
----
+## 2 Langkah Emas:
+1. **Perintah Detail:** Jangan bilang "Buatkan web". Bilanglah, "Kamu adalah ahli pembuat web. Buatkan satu halaman kalkulator berwarna biru, dengan tombol yang membulat."
+2. **Revisi Tanpa Ragu:** Kalau hasilnya salah, jangan perbaiki kodenya sendiri. Cukup bilang ke AI, "Tombol tambahnya tidak berfungsi, tolong betulkan."
 
-## 2. Mengenal Penipuan Online (Phishing / Umpan Pancing)
-Pernahkah kamu melihat ada orang memancing ikan? Mereka memasang cacing di kail agar ikan tertipu dan mau memakannya.
-Di dunia internet, ini disebut **phishing**. Penjahat memasang "umpan palsu" di WhatsApp atau SMS agar kita terjebak memberikan kata sandi (password).
-
-### Umpan yang Sering Dipakai:
-- **Chat Kurir**: Mengirim file \`.APK\` lewat WhatsApp. Katanya itu foto paket kamu. Jika kamu klik dan instal, dia akan mengambil kode rahasia SMS kamu secara diam-diam!
-- **Link Hadiah Gratis**: Link web palsu yang bilang kamu menang undian. Kamu disuruh login ke situ. Jika kamu lakukan, password kamu akan dicuri pelaku.
-
----
-
-## 3. Cara Mudah Aman di Internet
-1. **Buat Password Panjang**: Jangan pakai tanggal lahir. Pakai kalimat biasa saja yang panjang, contoh: \`sayaSukaMakanSateKambing@2026\`. Ini sangat sulit ditebak orang lain tapi gampang kamu ingat.
-2. **Aktifkan Kunci Tambahan (MFA/Verifikasi 2 Langkah)**: Aktifkan fitur verifikasi 2 langkah di WhatsApp kamu. Dengan begitu, sekalipun orang lain tahu password kamu, mereka tetap tidak bisa masuk tanpa kode tambahan yang dikirim ke HP-mu.
+Ayo coba pesanan pertama kamu sekarang!
 `;
 
-export const SEED_MOCK_ADVANCED_MODULE = `# Modul Peserta (Versi Lanjutan): Dasar Cybersecurity & Analisis Vektor Serangan siber
-
-Modul tingkat lanjut ini ditujukan bagi siswa yang ingin mendalami mekanisme teknis serangan rekayasa sosial (*Social Engineering*) dan mitigasi risiko siber tingkat organisasi.
+export const SEED_MOCK_ADVANCED_MODULE = `# Modul Peserta (Versi Pakar): Advanced Prompt Engineering untuk Vibe Coding
 
 ---
 
-## 1. Keamanan Siber & Lanskap Ancaman Modern
-Dalam era modern, perimeter keamanan tidak lagi terbatas pada firewall jaringan. Serangan siber paling mematikan sering kali menyasar celah paling rentan di setiap sistem: **manusia** (*the human firewall*). 
+## 1. Zero-Shot vs Few-Shot Prompting dalam Code Generation
+Meningkatkan determinisme output agen AI saat melakukan *scaffolding* arsitektur proyek. Pada tingkat mahir, jangan sekadar memberi instruksi konseptual. Berikan *Few-Shot Examples* dari arsitektur JSON atau pola komponen yang Anda inginkan.
 
-Rekayasa sosial (*Social Engineering*) adalah manipulasi psikologis korban untuk membocorkan kredensial atau informasi rahasia.
+## 2. Mengendalikan Halusinasi dengan System Constraints
+Saat membangun aplikasi kompleks, injeksikan *Guardrails* teknis ketat. 
+Contoh: \`Strictly use functional components. Do not import React Router unless specified. Adhere to ESLint Airbnb style guide.\`
 
----
-
-## 2. Bedah Teknis Vektor Serangan Phishing
-Serangan phishing modern menggunakan teknik yang presisi untuk menduplikasi identitas.
-
-### Mekanisme Serangan APK Phishing (Spyware):
-1. **Pengiriman Payload**: Penyerang mendistribusikan payload berbahaya berformat Android Package (\`.APK\`) yang disamarkan menggunakan ekstensi ganda atau nama paket manipulatif (e.g. \`Lihat_Resi_Paket.pdf.apk\`).
-2. **Eksploitasi Izin (Permissions)**: Setelah diinstal, aplikasi meminta izin akses krusial, khususnya \`READ_SMS\` dan \`RECEIVE_SMS\`.
-3. **Penyusupan OTP**: Saat korban melakukan transaksi keuangan atau login akun, payload mencegat pesan SMS masuk yang berisi OTP (One-Time Password) dan mentransmisikannya ke server Command and Control (C2) milik penyerang.
-
-### Analisis Domain Tiruan:
-Pelaku sering menggunakan teknik *Typosquatting* (mendaftarkan domain mirip domain asli, seperti \`sh0pee.co-id.secure\`) atau menggunakan subdomain pada platform hosting gratis untuk memanipulasi kredensial SSL (HTTPS).
-
----
-
-## 3. Strategi Defensif Tingkat Lanjut
-Untuk mengamankan akun dan infrastruktur:
-1. **Password Entropy & Management**: Menggunakan entropy kata sandi yang tinggi (di atas 80 bit) dan menerapkan sistem penyimpanan terenkripsi zero-knowledge (Password Manager).
-2. **U2F / FIDO2 Security Keys**: Meninggalkan SMS-based MFA dan beralih ke verifikasi berbasis hardware (seperti YubiKey) atau aplikasi Authenticator berbasis TOTP (Time-Based One-Time Password) untuk mencegah serangan Man-in-the-Middle (MitM) phishing.
+## 3. Iterasi Arsitektural Berbasis Git
+Vibe Coding yang profesional mengombinasikan Prompting dengan *Version Control*. Integrasikan agen dengan terminal lokal Anda (seperti Cursor/Windsurf) agar setiap refaktor AI dicatat sebagai *commit* terpisah. Ini menjamin eksperimentasi yang aman.
 `;
 
 export const SEED_QA_REPORT: QAReport = {
-  score: 96,
-  summary: "Secara keseluruhan dokumen pembelajaran ini sudah luar biasa lengkap, selaras secara pedagogis, memiliki visualisasi diagram alir Alur APK Phishing yang sangat membantu pemahaman siswa, serta latihan kontekstual yang mendalam.",
+  score: 98,
+  summary: "Luar Biasa! Modul pelatihan ini sangat futuristik dan kontekstual. Paradigma Vibe Coding dijelaskan dengan metafora yang amat kuat sehingga siswa non-teknis bisa langsung memahaminya. Instruksi di Panduan Guru juga menstimulasi metode *hands-on* dengan cepat.",
   strengths: [
-    "Diagram alir ancaman APK sangat mempermudah pemahaman kognitif siswa.",
-    "Tingkat relevansi konteks lokal (WhatsApp, Shopee, Mandiri) sangat tinggi.",
-    "Pembagian waktu (schedule) dan tips pelaksanaan di panduan guru sangat rinci."
+    "Penggunaan analogi 'Misi, Eksekusi, Guardrails, Aturan' (MEGA) sangat pedagogis untuk pemula.",
+    "Bagan diagram alir (Mermaid) menunjukkan dengan jelas bahwa Vibe Coding adalah proses iteratif.",
+    "Topik ini adalah perwujudan sejati dari visi ke depan teknologi pendidikan modern!"
   ],
   issues: []
 };
@@ -424,10 +326,10 @@ const GLOBAL_PROJECTS: Record<string, Project> = {};
 
 // Helper to seed a initial project for demonstration
 export const seedSampleProject = (): Project => {
-  const sampleId = "demo-cybersecurity";
+  const sampleId = "demo-vibecoding";
   const project: Project = {
     id: sampleId,
-    title: "Dasar Cybersecurity untuk SMK",
+    title: "Vibe Coding: App dengan AI",
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString(),
     status: "qa_ready",

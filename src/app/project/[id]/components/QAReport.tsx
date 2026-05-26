@@ -23,13 +23,16 @@ export function QAReport({
       <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 md:p-8">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 border-b border-slate-100 pb-6 mb-6">
           <div>
-            <span className="text-xs text-teal-600 font-extrabold uppercase tracking-wider bg-teal-50 px-2 py-0.5 rounded border border-teal-200">Laporan Kualitas</span>
+            <span className="text-xs text-indigo-600 font-extrabold uppercase tracking-wider bg-indigo-50 px-2 py-0.5 rounded border border-indigo-200 flex items-center w-fit gap-1 mb-2">
+              <Sparkles className="h-3 w-3" />
+              Audited by Gemini Agent
+            </span>
             <h2 className="text-xl font-black text-slate-900 mt-1 flex items-center gap-2">
               <ShieldCheck className="h-5 w-5 text-teal-600" />
               4. Hasil Pengecekan Kualitas
             </h2>
             <p className="text-sm text-slate-500 mt-0.5 leading-relaxed">
-              AI telah memeriksa kesesuaian materi dengan tujuan belajar, alokasi waktu, dan memberikan saran perbaikan.
+              Agen AI telah mengaudit materi secara otomatis untuk memastikan kesesuaian dengan tujuan belajar dan durasi.
             </p>
           </div>
 

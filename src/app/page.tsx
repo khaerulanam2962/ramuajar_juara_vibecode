@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { 
   BookOpen, Plus, FileText, Key, ArrowRight, GraduationCap, 
   CheckCircle, Sliders, ShieldCheck, Trash2, Sparkles, BookOpenCheck,
-  Settings, X
+  Settings, X, Clock, Files
 } from "lucide-react";
 import { getProjects, createNewProject, deleteProject, saveProject } from "@/lib/storage/projectStore";
 import { seedSampleProject } from "@/lib/storage/mockData";
@@ -133,7 +133,12 @@ export default function HomePage() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans pb-16">
+    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans pb-16 relative overflow-hidden">
+      {/* Dynamic Agentic Background */}
+      <div className="absolute inset-0 pointer-events-none z-0 no-print">
+        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-teal-400/20 rounded-full blur-[100px] animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-indigo-400/10 rounded-full blur-[120px] mix-blend-multiply"></div>
+      </div>
       {/* Navbar */}
       <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200/80 px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
@@ -229,18 +234,33 @@ export default function HomePage() {
       )}
 
       {/* Hero Section */}
-      <section className="max-w-6xl mx-auto px-6 py-12 text-center md:text-left md:py-20 flex flex-col md:flex-row items-center justify-between gap-12">
+      <section className="relative z-10 max-w-6xl mx-auto px-6 py-12 text-center md:text-left md:py-20 flex flex-col md:flex-row items-center justify-between gap-12">
         <div className="flex-1 space-y-6">
-          <div className="inline-flex items-center gap-2 bg-teal-50 border border-teal-200 px-3 py-1 rounded-full text-teal-800 text-sm font-semibold">
-            <Sparkles className="h-3 w-3 text-teal-600" />
-            🎓 Asisten Guru Cerdas Bertenaga AI
+          <div className="flex flex-col sm:flex-row items-center gap-2">
+            <div className="inline-flex items-center gap-2 bg-teal-50 border border-teal-200 px-3 py-1 rounded-full text-teal-800 text-sm font-semibold">
+              <Sparkles className="h-3 w-3 text-teal-600" />
+              🎓 Asisten Guru Cerdas Bertenaga AI
+            </div>
+            <div className="inline-flex items-center gap-2 bg-indigo-50 border border-indigo-200 px-3 py-1 rounded-full text-indigo-800 text-sm font-semibold">
+              ✨ Dibangun dengan Vibe Coding & Gemini
+            </div>
           </div>
           <h2 className="text-4xl md:text-5xl font-black text-slate-900 leading-tight">
-            Ramu paket ajar lengkap dalam <span className="bg-gradient-to-r from-teal-600 to-cyan-500 bg-clip-text text-transparent">hitungan menit</span>.
+            Ramu paket ajar lengkap dalam <span className="bg-gradient-to-r from-teal-600 to-cyan-500 bg-clip-text text-transparent">hitungan menit</span>, bukan hari.
           </h2>
           <p className="text-slate-600 leading-relaxed max-w-xl text-base md:text-lg">
-            RamuAjar AI membantu guru, trainer, dan mentor meramu draf pembelajaran menjadi paket dokumen lengkap: modul siswa, panduan guru, lembar kerja, kuis, dan rubrik penilaian yang adaptif.
+            Tinggalkan cara manual. RamuAjar AI membantu guru, trainer, dan mentor meramu instruksi singkat menjadi paket <strong>Modul, LKPD, Panduan, Kuis, dan Rubrik</strong> yang siap pakai, adaptif, dan tervalidasi secara pedagogis.
           </p>
+          <div className="flex flex-wrap gap-4 justify-center md:justify-start">
+            <div className="flex items-center gap-2">
+              <div className="bg-emerald-100 p-2 rounded-lg"><Clock className="h-4 w-4 text-emerald-700" /></div>
+              <div className="text-left"><p className="text-xs text-slate-500 font-medium">Hemat Waktu</p><p className="font-bold text-sm text-slate-800">15+ Jam/Minggu</p></div>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="bg-sky-100 p-2 rounded-lg"><Files className="h-4 w-4 text-sky-700" /></div>
+              <div className="text-left"><p className="text-xs text-slate-500 font-medium">Otomasi Lengkap</p><p className="font-bold text-sm text-slate-800">8 Jenis Dokumen</p></div>
+            </div>
+          </div>
           
           <div className="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start">
             <button 
@@ -261,34 +281,34 @@ export default function HomePage() {
         </div>
 
         {/* Feature Grid Visual */}
-        <div className="flex-1 grid grid-cols-2 gap-4 max-w-md w-full">
-          <div className="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm flex flex-col gap-3 min-h-[48px]">
+        <div className="flex-1 grid grid-cols-2 gap-4 max-w-md w-full relative z-10">
+          <div className="bg-white/70 backdrop-blur-md p-5 rounded-2xl border border-white shadow-sm flex flex-col gap-3 min-h-[48px] hover:shadow-md transition-shadow">
             <div className="bg-teal-50 text-teal-600 p-2.5 rounded-xl w-fit">
               <Plus className="h-5 w-5" />
             </div>
             <h3 className="font-bold text-sm text-slate-800">1. Tulis Ide Ajar</h3>
-            <p className="text-sm text-slate-500 leading-relaxed">Ceritakan ide pengajaran Anda secara bebas, AI bantu susun rencana otomatis.</p>
+            <p className="text-sm text-slate-500 leading-relaxed">Ceritakan ide secara bebas, AI Agent susun rencana otomatis.</p>
           </div>
-          <div className="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm flex flex-col gap-3 mt-4 min-h-[48px]">
+          <div className="bg-white/70 backdrop-blur-md p-5 rounded-2xl border border-white shadow-sm flex flex-col gap-3 mt-4 min-h-[48px] hover:shadow-md transition-shadow">
             <div className="bg-indigo-50 text-indigo-600 p-2.5 rounded-xl w-fit">
-              <Sliders className="h-5 w-5" />
+              <Sparkles className="h-5 w-5" />
             </div>
-            <h3 className="font-bold text-sm text-slate-800">2. Atur Tingkat Kesulitan</h3>
-            <p className="text-sm text-slate-500 leading-relaxed">Sesuaikan materi untuk siswa pemula, menengah, atau mahir dengan satu klik.</p>
+            <h3 className="font-bold text-sm text-slate-800">2. Auto-Adaptasi</h3>
+            <p className="text-sm text-slate-500 leading-relaxed">Sesuaikan materi untuk beragam level (pemula/mahir) dengan satu klik.</p>
           </div>
-          <div className="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm flex flex-col gap-3 min-h-[48px]">
+          <div className="bg-white/70 backdrop-blur-md p-5 rounded-2xl border border-white shadow-sm flex flex-col gap-3 min-h-[48px] hover:shadow-md transition-shadow">
             <div className="bg-orange-50 text-orange-600 p-2.5 rounded-xl w-fit">
               <ShieldCheck className="h-5 w-5" />
             </div>
-            <h3 className="font-bold text-sm text-slate-800">3. Cek Kualitas Otomatis</h3>
-            <p className="text-sm text-slate-500 leading-relaxed">AI memeriksa apakah materi sudah sesuai tujuan belajar dan durasi.</p>
+            <h3 className="font-bold text-sm text-slate-800">3. Audit AI (QA)</h3>
+            <p className="text-sm text-slate-500 leading-relaxed">Agent mengecek tujuan, kesesuaian durasi, dan rubrik secara otomatis.</p>
           </div>
-          <div className="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm flex flex-col gap-3 mt-4 min-h-[48px]">
+          <div className="bg-white/70 backdrop-blur-md p-5 rounded-2xl border border-white shadow-sm flex flex-col gap-3 mt-4 min-h-[48px] hover:shadow-md transition-shadow">
             <div className="bg-emerald-50 text-emerald-600 p-2.5 rounded-xl w-fit">
               <CheckCircle className="h-5 w-5" />
             </div>
-            <h3 className="font-bold text-sm text-slate-800">4. Unduh & Cetak</h3>
-            <p className="text-sm text-slate-500 leading-relaxed">Unduh semua dokumen atau cetak langsung menjadi PDF.</p>
+            <h3 className="font-bold text-sm text-slate-800">4. Ebook Ekspor</h3>
+            <p className="text-sm text-slate-500 leading-relaxed">Unduh PDF standar penerbit (Publisher-Grade) siap cetak.</p>
           </div>
         </div>
       </section>

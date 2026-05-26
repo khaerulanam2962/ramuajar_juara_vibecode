@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sliders, ShieldCheck, Save, Edit3, Clipboard } from 'lucide-react';
+import { Sliders, ShieldCheck, Save, Edit3, Clipboard, Sparkles } from 'lucide-react';
 import { Project, DocumentPack, QuizItem, RubricItem } from '@/types/project';
 import { RenderMarkdown } from '@/lib/markdown';
 
@@ -52,10 +52,10 @@ export function DocumentPackTabs({
               {(activeDocTab === "studentModule" || activeDocTab === "facilitatorGuide" || activeDocTab === "worksheet") && (
                 <button
                   onClick={() => setShowAdaptPanel(true)}
-                  className="bg-indigo-50 border border-indigo-200 text-indigo-700 hover:bg-indigo-100 px-3.5 py-2.5 rounded-xl font-bold text-sm flex items-center gap-1.5 transition-all cursor-pointer"
+                  className="bg-indigo-50 border border-indigo-200 text-indigo-700 hover:bg-indigo-100 px-3.5 py-2.5 rounded-xl font-bold text-sm flex items-center gap-1.5 transition-all cursor-pointer shadow-sm shadow-indigo-600/10"
                 >
-                  <Sliders className="h-4 w-4" />
-                  🎯 Atur Tingkat
+                  <Sparkles className="h-4 w-4 animate-pulse text-indigo-600" />
+                  ✨ Gemini Auto-Adapt
                 </button>
               )}
               <button

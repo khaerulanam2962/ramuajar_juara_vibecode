@@ -5,8 +5,10 @@ import React, { useState, useEffect } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { 
   ArrowLeft, GraduationCap, Key, CheckCircle2, ChevronRight,
-  RefreshCw, AlertTriangle, AlertCircle, Sparkles 
+  RefreshCw, AlertTriangle, AlertCircle, Sparkles, BookOpen,
+  FileText, Sliders, ShieldCheck, CheckCircle, Clipboard, X, Info
 } from "lucide-react";
+import { RenderMarkdown } from "@/lib/markdown";
 import { getProjectById, saveProject } from "@/lib/storage/projectStore";
 import { Project, TeachingBrief, LearningBlueprint, DocumentPack, QAReport } from "@/types/project";
 import { useToast } from "@/app/components/Toast";
@@ -44,6 +46,9 @@ export default function ProjectWorkspace() {
   // Free text idea input for Auto-fill with AI
   const [rawInputIdea, setRawInputIdea] = useState("");
 
+  // Jury Welcome Modal state
+  const [showJuryModal, setShowJuryModal] = useState(false);
+
   // Friendly loading message labels for document types
   const docTypeLabels: Record<string, string> = {
     studentModule: "📘 Menyiapkan Modul Siswa",
@@ -68,6 +73,7 @@ export default function ProjectWorkspace() {
     // Set step based on project status
     if (proj.isDemo) {
       setActiveStep(0); // Force demo projects to start at the first step
+      setShowJuryModal(true);
     } else {
       if (proj.status === "draft") setActiveStep(0);
       else if (proj.status === "blueprint_ready") setActiveStep(1);
@@ -511,6 +517,49 @@ export default function ProjectWorkspace() {
 
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col print:bg-white print:text-black">
+      {/* Jury Welcome Modal */}
+      {showJuryModal && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 animate-fade-in no-print">
+          <div className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm" onClick={() => setShowJuryModal(false)} />
+          <div className="relative bg-white rounded-2xl shadow-2xl max-w-lg w-full p-6 animate-scale-in border border-indigo-100">
+            <button
+              onClick={() => setShowJuryModal(false)}
+              className="absolute top-4 right-4 text-slate-400 hover:text-slate-600 p-2 rounded-lg hover:bg-slate-100 transition-colors"
+            >
+              <X className="h-5 w-5" />
+            </button>
+            <div className="bg-indigo-50 text-indigo-600 p-3 rounded-xl w-fit mb-4">
+              <Sparkles className="h-6 w-6" />
+            </div>
+            <h3 className="font-extrabold text-xl text-slate-900 mb-2">👋 Halo, Dewan Juri!</h3>
+            <div className="space-y-4 text-sm text-slate-600 leading-relaxed mb-6">
+              <p>
+                Selamat datang di halaman <strong>Ruang Kerja RamuAjar AI</strong>. Ini adalah proyek demonstrasi yang telah di-<em>generate</em> secara otomatis.
+              </p>
+              <div className="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                <p className="font-bold text-slate-800 flex items-center gap-2 mb-2">
+                  <Info className="h-4 w-4 text-teal-600" />
+                  ✨ Fitur Unggulan (Vibe Coding Impact):
+                </p>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li><strong>Tulis Rencana (Langkah 1):</strong> Lihat bagaimana brief pengajaran awal disusun oleh instruktur.</li>
+                  <li><strong>Rancangan Silabus (Langkah 2):</strong> Lihat bagaimana Gemini Agent merancang alur belajar terstruktur.</li>
+                  <li><strong>Dokumen Ajar (Langkah 3):</strong> Cobalah fitur <strong>✨ Gemini Auto-Adapt</strong> untuk melihat Gemini mengadaptasi teks untuk beragam level siswa (Sulit/Mudah) dengan satu klik.</li>
+                  <li><strong>Pedagogical QA (Langkah 4):</strong> Lihat bagaimana Gemini mengaudit dokumen ajar (Kesesuaian durasi, Rubrik) dan memberi skor serta saran adaptif secara otonom.</li>
+                  <li><strong>Unduh Hasil (Langkah 5):</strong> Eksplorasi mode cetak PDF untuk melihat kualitas luaran berstandar penerbit (Publisher-Grade).</li>
+                </ul>
+              </div>
+            </div>
+            <button
+              onClick={() => setShowJuryModal(false)}
+              className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-xl shadow-lg shadow-indigo-600/20 transition-all"
+            >
+              Mulai Jelajahi Demo
+            </button>
+          </div>
+        </div>
+      )}
+
       {/* Top workspace bar */}
       <header className="sticky top-0 z-40 bg-white border-b border-slate-200/80 px-6 py-4 flex items-center justify-between no-print shadow-sm">
         <div className="flex items-center gap-4">

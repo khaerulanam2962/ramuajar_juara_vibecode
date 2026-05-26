@@ -162,12 +162,34 @@ body {
 /* ========== PRINT STYLES ========== */
 
 @media print {
+  @page {
+    margin: 2cm;
+    size: A4 portrait;
+  }
+
   body {
     background-color: #ffffff !important;
     color: #000000 !important;
-    font-size: 12pt;
+    font-size: 11pt;
+    line-height: 1.6;
   }
-  
+
+  h1, h2, h3, h4, h5 {
+    page-break-after: avoid;
+    break-after: avoid;
+    color: #000000 !important;
+  }
+
+  p, ul, ol, li {
+    orphans: 3;
+    widows: 3;
+  }
+
+  table, pre, img, blockquote {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
   .no-print {
     display: none !important;
   }
@@ -178,6 +200,7 @@ body {
   
   .print-page-break {
     page-break-before: always;
+    break-before: page;
   }
 
   .print-card {
